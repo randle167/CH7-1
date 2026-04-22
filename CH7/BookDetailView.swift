@@ -29,12 +29,11 @@ struct BookDetailView: View {
             .lineSpacing(5)
     }//end Vstack
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .padding(horizontal, 30)
-        .font(title3)
-        .navigationTitle(Text(book.title)
-            .navigationBarTitleDisplayMode(DisplayMode.inline)
-        } //end body
-}
+        .padding(.horizontal, 30)
+        .font(.title3)
+        .navigationTitle(book.title)
+        .navigationBarTitleDisplayMode(.inline)
+    } //end body
 
 #Preview("Sample Book") {
     // Provide a sample book so the preview can render
