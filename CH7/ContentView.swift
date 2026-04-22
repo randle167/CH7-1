@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  CH7
+//  CH7 BookManager _AR
 //
 //  Created by Ashley Randle on 3/21/26.
 //
@@ -72,5 +72,5 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
+        
 }

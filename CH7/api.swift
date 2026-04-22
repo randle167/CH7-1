@@ -10,24 +10,28 @@ import Foundation
 func getBooks() -> [Book] {
     return [
         Book(
-            title: "the book 1",
-            author: "author 1",
-            summary: "description of book 1"
+            title:"The fellowship of the ring",
+            author:"J.R.R. Tolkien",
+            summary: "Fellowhip Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            cover:"lotr_fellowship",
+            
+            isFavorite: true,
+            genre: .sciFi,
+            readingStatus: .planToRead
         ),
         Book(
-            title: "the book 2",
-            author: "author 2",
-            summary: "description of book 2"
+            title:"The two towers",
+            author:"J.R.R. Tolkien",
+            summary: "Tower Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            cover: "lotr_towers",
+            isFavorite: true,
+            genre: .fantasy
         ),
         Book(
-            title: "the book 3",
-            author: "author 3",
-            summary: "description of book 3"
-        ),
-        Book(
-            title: "the book 4",
-            author: "author 4",
-            summary: "description of book 4"
+            title:"The return of the king",
+            author:"J.R.R. Tolkien",
+            summary: "King Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            cover: "lotr_king"
         )
     ]
 }

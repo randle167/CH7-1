@@ -13,17 +13,40 @@ struct BookDetailView: View {
     var body: some View {
         VStack {
             HStack {
-//                Image(book.cover)
-//                    .resizable()
-//                    .scaledToFit()
-//                    .frame(width: 100, height: 100)
-                
+                //                Image(book.cover)
+                //                    .resizable()
+                //                    .scaledToFit()
+                //                    .frame(width: 100, height: 100)
                 VStack {
                     Text(book.title)
                     Text("By: \(book.author)")
                 }
+                
+                .font(.title)
             }
-            Text(book.summary)
-        }
-    }
+        }//edn HStack
+        Text(book.summary)
+            .lineSpacing(5)
+    }//end Vstack
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .padding(horizontal, 30)
+        .font(title3)
+        .navigationTitle(Text(book.title)
+            .navigationBarTitleDisplayMode(DisplayMode.inline)
+        } //end body
 }
+
+#Preview("Sample Book") {
+    // Provide a sample book so the preview can render
+    let sample = Book(
+        title: "Sample Title",
+        author: "Sample Author",
+        summary: "This is a short summary used only for previewing the layout of BookDetailView.",
+        //image:  "lotr_fellowship"
+    )
+    BookDetailView(book: sample)
+}
+        
+                     
+                        
+

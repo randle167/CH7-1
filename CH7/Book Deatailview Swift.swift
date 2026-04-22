@@ -17,7 +17,7 @@ struct BookDetailview: View {
            NavigationStack{
                VStack(alignment: .leading){
                    HStack{
-                       Image(book.cover)
+                       Image($book.cover)
                            .resizable()
                            .scaledToFit()
                            .frame(width: 100, height: 150)
