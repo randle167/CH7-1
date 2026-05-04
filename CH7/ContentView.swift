@@ -20,25 +20,30 @@ struct ContentView: View {
 //    ]
     
     private let books = getBooks()
+    
+    @State private var showImage = false
 
     var body: some View {
         NavigationSplitView {
+            Toggle("Show Image", isOn: $showImage)
+                .padding()
+            
             List(books) { book in
                 NavigationLink(destination: BookDetailView(book: book)) {
                     BookListItem(book: book)
                 }
             }
             
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
-                    }
-                }
-                .onDelete(perform: deleteItems)
-            }
+//            List {
+//                ForEach(items) { item in
+//                    NavigationLink {
+//                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
+//                    } label: {
+//                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
+//                    }
+//                }
+//                .onDelete(perform: deleteItems)
+//            }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     EditButton()

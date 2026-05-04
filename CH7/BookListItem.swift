@@ -13,7 +13,10 @@ struct BookListItem: View {
     var body: some View {
         
         VStack {
-//            Image(book.cover)
+            Image(book.image)
+                .resizable()
+                .scaledToFit()
+                .frame(width: 200, height: 200)
             
             Text(book.title)
                 .font(.headline)

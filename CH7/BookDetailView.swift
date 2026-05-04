@@ -12,11 +12,12 @@ struct BookDetailView: View {
     
     var body: some View {
         VStack {
-            HStack {
+            VStack {
                 Image(book.image)
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 100, height: 100)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 200, height: 200)
+                
                 VStack {
                     Text(book.title)
                     Text("By: \(book.author)")
